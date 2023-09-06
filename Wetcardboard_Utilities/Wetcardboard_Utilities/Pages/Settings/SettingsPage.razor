@@ -1,0 +1,13 @@
+﻿@page "/settings"
+@using Wetcardboard_Utilities.Components
+
+
+<AuthorizeView>
+    <NotAuthorized>
+        <h3>You are not authorized to view this page.</h3>
+    </NotAuthorized>
+
+    <Authorized>
+        <SettingsPageContent />
+    </Authorized>
+</AuthorizeView>

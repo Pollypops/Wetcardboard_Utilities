@@ -1,0 +1,44 @@
+﻿@using Blazored.SessionStorage
+@using System.Text;
+@using Wetcardboard_Authentication.Authenticator
+@using Wetcardboard_Components.Ui.Toast
+
+@inherits LayoutComponentBase
+
+@inject IAuthenticator authenticator
+@inject ISessionStorageService sessionStorage
+
+@inject NavigationManager navigationManager
+
+
+<PageTitle>Utilities</PageTitle>
+
+<div>
+    <Toast_Container />
+
+    <div class="page">
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+
+        <main>
+            <AuthorizeView>
+                <NotAuthorized>
+                    <div class="top-row px-4 login-btn">
+                        <a target="_blank" onclick="@Login">Login</a>
+                    </div>
+                </NotAuthorized>
+
+                <Authorized>
+                    <div class="top-row px-4 login-btn">
+                        <a target="_blank" onclick="@Logout">Logout</a>
+                    </div>
+                </Authorized>
+            </AuthorizeView>
+
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+</div>

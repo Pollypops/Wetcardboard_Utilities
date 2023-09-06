@@ -1,0 +1,28 @@
+﻿@page "/home"
+@attribute [Authorize(Roles = "Admin")]
+@attribute [Authorize(Roles = "User")]
+
+@using Blazored.SessionStorage;
+@using System.Text.Json;
+@inject ISessionStorageService sessionStorage;
+@inject IHttpClientFactory httpClientFactory;
+
+<PageTitle>Home</PageTitle>
+
+<AuthorizeView Roles="User">
+    <Authorized>
+        <p>User Role</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>Aint nobody been user roles</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <p>Ding dong diddeli damn. You're in it now'</p>
+    </Authorized>
+    <NotAuthorized>
+        <p>You don't have access to this page'</p>
+    </NotAuthorized>
+</AuthorizeView>

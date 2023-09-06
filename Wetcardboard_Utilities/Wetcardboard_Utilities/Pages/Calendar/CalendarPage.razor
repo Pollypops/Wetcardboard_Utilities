@@ -1,0 +1,6 @@
+﻿@page "/calendar"
+@attribute [Authorize(Roles = "Admin")]
+@attribute [Authorize(Roles = "User")]
+
+<h3>Calendar</h3>
+<p>@CurrentDateString</p>

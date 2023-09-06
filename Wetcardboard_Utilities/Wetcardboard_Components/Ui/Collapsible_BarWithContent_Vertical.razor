@@ -1,0 +1,13 @@
+﻿@using System.Text;
+
+<div style="@RootStyle">
+    <div class="@HeaderContainerClass" style="@HeaderContainerStyle" @onclick="ToggleCollapsed">
+        <span class="oi oi-chevron-top @HeaderIconClass" style="@HeaderIconStyle" />
+        <p class="header-text" style="@HeaderTextStyle">@HeaderText</p>
+    </div>
+    <div style="@ContentRootContainerStyle">
+        <div style="@ContentContainerStyle">
+            @ChildContent
+        </div>
+    </div>
+</div>
