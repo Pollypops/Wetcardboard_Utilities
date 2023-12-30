@@ -39,7 +39,7 @@ namespace Wetcardboard_Components.Ui.Toast
         {
             var toastMessage = new Wetcardboard_ToastMessage
             {
-                ExpiryTime = DateTime.Now.AddSeconds(35),
+                ExpiryTime = DateTime.Now.AddSeconds(25),
                 Message = e.ToastMessage
             };
             ToastMessages.Add(toastMessage);
