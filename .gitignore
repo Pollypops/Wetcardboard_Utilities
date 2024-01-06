@@ -475,3 +475,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+Wetcardboard_Utilities/Wetcardboard_Utilities/appsettings.json
+Wetcardboard_Utilities/Wetcardboard_Utilities/appsettings.development.json
+Wetcardboard_Utilities_Api/Wetcardboard_Utilities_Api/appsettings.json
